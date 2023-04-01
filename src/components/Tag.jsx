@@ -20,10 +20,9 @@ function Tag() {
         let search = input.value;
         console.log(search);
         setloading(true);
-        
         fetchData(search);
         setTag(search);
-        input.value = ' ';
+        input.value = ' '; 
     }
 
     async function fetchData(tag){
@@ -72,7 +71,7 @@ function Tag() {
   return (
     <div className='bg-white text-black p-10 rounded-lg text-center'>
     <h1 className='text-2xl font-bold mb-2'>Search Gif</h1>
-    {loading ? (<Spinner/>) : (<img src={gif} alt="gif" className='w-[500px] mx-auto h-[400px]' data-tagGif/>) }
+    {loading ? (<Spinner/>) : (<img src={gif} alt="gif" className='w-[300px] mx-auto h-[300px] lg:w-[500px] lg:h-[400px]' data-tagGif/>) }
 
 <div className='flex shadow-lg border-[#b1d2ff] border-4 rounded-lg mt-5 p-2'>
 <input type="text" name="search" className='border-none bg-white w-11/12 px-4 focus:outline-none' placeholder='Search Gif' data-search/>
